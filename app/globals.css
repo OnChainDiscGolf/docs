@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #10b981;
+  --color-brand-secondary: #3b82f6;
+  --color-brand-accent: #f59e0b;
+  --color-brand-dark: #0f172a;
+  --color-brand-surface: #1e293b;
+}
+
+body {
+  @apply bg-brand-dark text-white antialiased;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom link styles */
+a {
+  @apply text-brand-primary hover:text-emerald-400 transition-colors;
+}
+
+/* Code blocks */
+code {
+  @apply bg-brand-surface px-2 py-1 rounded text-sm font-mono;
+}
