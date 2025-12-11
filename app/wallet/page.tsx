@@ -15,8 +15,8 @@ export default function Wallet() {
       <h1 className="text-4xl font-bold mb-8">Wallet & Payments</h1>
 
       <p className="text-xl text-gray-300 mb-8">
-        On-Chain Disc Golf has a built-in wallet so you can play for stakes without 
-        cash or payment apps. Here&apos;s how it works.
+        On-Chain Disc Golf has a built-in self-custodial wallet powered by Breez SDK, 
+        so you can play competitive rounds without cash or payment apps. Here&apos;s how it works.
       </p>
 
       {/* How It Works */}
@@ -34,17 +34,36 @@ export default function Wallet() {
             <div className="flex gap-4">
               <span className="text-3xl">2️⃣</span>
               <div>
-                <h3 className="font-semibold text-white">Play rounds for stakes</h3>
-                <p className="text-sm text-gray-400">Entry fees come from your balance automatically</p>
+                <h3 className="font-semibold text-white">Play competitive rounds</h3>
+                <p className="text-sm text-gray-400">Round entries come from your balance automatically</p>
               </div>
             </div>
             <div className="flex gap-4">
               <span className="text-3xl">3️⃣</span>
               <div>
-                <h3 className="font-semibold text-white">Win and get paid</h3>
-                <p className="text-sm text-gray-400">Winnings go straight to your wallet — no waiting</p>
+                <h3 className="font-semibold text-white">Win and receive settlement</h3>
+                <p className="text-sm text-gray-400">Funds go straight to your wallet — no waiting</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Your Lightning Address */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">Your Lightning Address</h2>
+        <div className="space-y-4 text-gray-300">
+          <p>
+            Your wallet comes with a human-readable Lightning address that looks like an email:
+          </p>
+          
+          <div className="bg-brand-primary/10 border border-brand-primary/30 rounded-xl p-6">
+            <h3 className="font-semibold text-brand-primary mb-2">yourname@breez.tips</h3>
+            <p className="text-sm">
+              This is your permanent address for receiving Bitcoin. Anyone can send you funds 
+              using this address — it&apos;s linked to your Nostr identity and works with any 
+              Lightning wallet.
+            </p>
           </div>
         </div>
       </section>
@@ -58,10 +77,16 @@ export default function Wallet() {
           </p>
           
           <div className="bg-brand-surface/50 rounded-xl p-6 space-y-4">
-            <h3 className="font-semibold text-white">You&apos;ll get a Lightning invoice</h3>
-            <p className="text-sm">
-              This is a QR code you can pay from any Bitcoin Lightning wallet, like:
-            </p>
+            <h3 className="font-semibold text-white">You can receive via:</h3>
+            <ul className="list-disc list-inside text-sm space-y-1">
+              <li><strong>Lightning Address</strong> — Share your @breez.tips address</li>
+              <li><strong>QR Code</strong> — Others scan to send you funds</li>
+              <li><strong>Lightning Invoice</strong> — Generate a one-time payment request</li>
+            </ul>
+          </div>
+          
+          <div className="bg-brand-surface/50 rounded-xl p-6 space-y-4">
+            <h3 className="font-semibold text-white">Send from any Lightning wallet:</h3>
             <ul className="list-disc list-inside text-sm space-y-1">
               <li><strong>Cash App</strong> — Enable Bitcoin, scan the QR code</li>
               <li><strong>Strike</strong> — Fast and easy, works great</li>
@@ -102,19 +127,19 @@ export default function Wallet() {
         </div>
       </section>
 
-      {/* Receiving Payments */}
+      {/* Receiving Funds */}
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">Receiving Payments</h2>
+        <h2 className="text-2xl font-bold mb-4">Receiving Funds</h2>
         <div className="space-y-4 text-gray-300">
           <p>
-            You have a <strong>Lightning Address</strong> that looks like an email. 
-            Anyone can send you money using it. Find it in your Profile or Wallet tab.
+            Your <strong>@breez.tips</strong> Lightning address works everywhere. 
+            Anyone can send you money using it — find it in your Profile or Wallet tab.
           </p>
           
           <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6">
             <h3 className="font-semibold text-emerald-400 mb-2">⚡ Instant & automatic</h3>
             <p className="text-sm">
-              When you win a round, the money appears in your wallet automatically. 
+              When you win a round, funds appear in your wallet automatically. 
               No action needed on your part — just check your balance after the round ends.
             </p>
           </div>
@@ -145,20 +170,41 @@ export default function Wallet() {
         </div>
       </section>
 
+      {/* Self-Custody */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-4">Self-Custodial Wallet</h2>
+        <div className="space-y-4 text-gray-300">
+          <p>
+            Your wallet is powered by <strong>Breez SDK</strong>, which means you control your funds directly — 
+            no third party holds your money.
+          </p>
+          
+          <div className="bg-brand-surface/50 rounded-xl p-6">
+            <h3 className="font-semibold text-white mb-2">What this means:</h3>
+            <ul className="list-disc list-inside text-sm space-y-1">
+              <li>Your funds are stored on your device, not on a server</li>
+              <li>Only you can access your money with your secret key</li>
+              <li>No company can freeze or seize your funds</li>
+              <li>You&apos;re responsible for backing up your key</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Important Notes */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4">Important Notes</h2>
         <div className="space-y-4">
           <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-6">
-            <h3 className="font-semibold text-amber-400 mb-2">⚠️ This is experimental</h3>
+            <h3 className="font-semibold text-amber-400 mb-2">⚠️ Early access software</h3>
             <p className="text-sm text-gray-300">
-              On-Chain Disc Golf is still in development. Don&apos;t store more money in the app 
-              than you&apos;re willing to lose. Start with small amounts until you&apos;re comfortable.
+              On-Chain Disc Golf is still in development. Start with small amounts 
+              until you&apos;re comfortable with how everything works.
             </p>
           </div>
           
           <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-6">
-            <h3 className="font-semibold text-amber-400 mb-2">🔑 Your key = your money</h3>
+            <h3 className="font-semibold text-amber-400 mb-2">🔑 Your key = your funds</h3>
             <p className="text-sm text-gray-300">
               If you lose your secret key, you lose access to your funds. There&apos;s no &quot;forgot 
               password&quot; option. Make sure your key is backed up!
@@ -190,4 +236,3 @@ export default function Wallet() {
     </div>
   );
 }
-

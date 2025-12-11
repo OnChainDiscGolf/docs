@@ -28,7 +28,7 @@ const faqs = [
     questions: [
       {
         q: "Is my money safe?",
-        a: "Your balance is stored using a technology called Cashu, which keeps your funds on your phone. However, the system relies on a third-party service (called a 'mint') to process transactions. This is still experimental technology, so we recommend not storing more than you're willing to lose. Think of it like cash in your pocket for disc golf, not your savings account.",
+        a: "Your balance is stored in a self-custodial Lightning wallet powered by Breez SDK, right on your phone. You control your funds—no third party holds your money. Your Lightning address (yourname@breez.tips) lets you receive payments instantly. As with any self-custody solution, make sure to back up your secret key!",
       },
       {
         q: "What if I lose my phone?",
@@ -44,7 +44,7 @@ const faqs = [
       },
       {
         q: "What are 'sats'?",
-        a: "Sats (short for Satoshis) are the smallest unit of Bitcoin — like cents to dollars. 1 Bitcoin = 100,000,000 sats. For disc golf stakes, you'll usually deal with a few hundred to a few thousand sats. We show dollar equivalents in the app so you don't have to do math.",
+        a: "Sats (short for Satoshis) are the smallest unit of Bitcoin — like cents to dollars. 1 Bitcoin = 100,000,000 sats. For disc golf rounds, you'll usually deal with a few hundred to a few thousand sats. We show dollar equivalents in the app so you don't have to do math.",
       },
     ],
   },
@@ -52,16 +52,16 @@ const faqs = [
     category: "Playing Rounds",
     questions: [
       {
-        q: "Can I play without betting money?",
-        a: "Absolutely! Just set the entry fee to $0 when creating a round. The app works great as a regular scorecard without any stakes.",
+        q: "Can I play without adding money?",
+        a: "Absolutely! Just set the round entry to $0 when creating a round. The app works great as a regular scorecard without any prize pool.",
       },
       {
-        q: "How does the winner get paid?",
-        a: "When the round creator taps 'Finalize Round', the pot is automatically sent to the player with the lowest score. No manual transfers needed — it just appears in the winner's wallet.",
+        q: "How does settlement work?",
+        a: "When the round creator taps 'Finalize Round', the prize pool is automatically sent to the player with the lowest score. No manual transfers needed — it just appears in the winner's wallet.",
       },
       {
         q: "What if there's a tie?",
-        a: "Currently, ties split the pot evenly between tied players. We're working on more options like playoff modes for future updates.",
+        a: "Currently, ties split the prize pool evenly between tied players. We're working on more options like playoff modes for future updates.",
       },
       {
         q: "Can I edit scores after entering them?",

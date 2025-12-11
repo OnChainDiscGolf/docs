@@ -113,7 +113,7 @@ export default function GettingStarted() {
             className="p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
           >
             <h3 className="font-semibold text-white mb-1">Add Money →</h3>
-            <p className="text-sm text-gray-400">Fund your wallet to play for stakes</p>
+            <p className="text-sm text-gray-400">Fund your wallet for competitive rounds</p>
           </Link>
         </div>
       </section>

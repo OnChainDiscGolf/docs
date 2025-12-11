@@ -40,14 +40,14 @@ export default function Playing() {
               <li className="flex gap-3">
                 <span className="text-brand-primary">💵</span>
                 <div>
-                  <strong className="text-white">Entry Fee</strong>
+                  <strong className="text-white">Round Entry</strong>
                   <p className="text-sm text-gray-400">How much each player puts in (can be $0 for casual rounds)</p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <span className="text-brand-primary">🎯</span>
                 <div>
-                  <strong className="text-white">Ace Pot</strong>
+                  <strong className="text-white">Ace Pool</strong>
                   <p className="text-sm text-gray-400">Optional extra for hole-in-ones</p>
                 </div>
               </li>
@@ -129,16 +129,16 @@ export default function Playing() {
             <ul className="list-disc list-inside space-y-1 text-sm">
               <li>Final scores are locked in</li>
               <li>The winner is determined (lowest score wins!)</li>
-              <li>If there was an entry fee, the pot is automatically sent to the winner</li>
+              <li>If there was a round entry, the prize pool is automatically sent to the winner</li>
               <li>Everyone sees the final results</li>
             </ul>
           </div>
 
           <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-6">
-            <h3 className="font-semibold text-emerald-400 mb-2">⚡ Instant Payouts</h3>
+            <h3 className="font-semibold text-emerald-400 mb-2">⚡ Instant Settlement</h3>
             <p className="text-sm">
               No more &quot;I&apos;ll Venmo you later&quot; or collecting cash in the parking lot. 
-              Winners get paid automatically the moment the round ends.
+              Settlement happens automatically the moment the round ends.
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function Playing() {
             className="p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
           >
             <h3 className="font-semibold text-white mb-1">Wallet & Payments →</h3>
-            <p className="text-sm text-gray-400">How to add money and get paid</p>
+            <p className="text-sm text-gray-400">How to add money and receive funds</p>
           </Link>
           <Link 
             href="/faq" 
